@@ -27,6 +27,9 @@ export function MediaCard({
             <CardMedia
                 component={"img"}
                 height={"120px"}
+                sx={{
+                    maxHeight: "120px",
+                }}
                 image={imageUrl}
                 backgroundPosition={"center"}
                 alt={altImage}
