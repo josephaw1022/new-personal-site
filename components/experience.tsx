@@ -13,27 +13,27 @@ interface ProjectItem {
 const ExperienceToList: ProjectItem[] = [
     {
         title: 'Single Page Applications',
-        description: 'Have worked with a number of single page applications, including React, Angular, Vue, and Next.js. Have even made microfrontends with React that were converted to web components.',
+        description: 'Have worked with a number of single page applications, including React, Angular, Vue, and Next.js.',
         imageUrl: 'reactjs.png',
     },
     {
         title: 'Rancher UI',
-        description: 'Have experience with working with Rancher UI. Have done basic deployments and have been able to use the UI to create and manage resources.',
+        description: 'Have done basic deployments and have been able to use the UI to create and manage resources.',
         imageUrl: 'rancher.jpeg',
     },
     {
         title: "Serverless Framework",
-        description: "Have worked with the Serverless Framework. Have been able to create and deploy functions with the framework. Helped migrate loopback server applications to an express serverless service architecture.",
+        description: "Have worked with the Serverless Framework. Have been able to create and deploy functions with the framework.",
         imageUrl: 'serverless-framework.png',
     },
     {
         title: 'AWS',
-        description: 'Have worked with AWS. Have been able to create and work with s3 buckets, lambda functions, cloudfront, container services, eks, and more in AWS. Have also been able to work with IAM roles and policies and practice principle of least privelege.',
+        description: 'Have worked with AWS. Have been able to create and work with s3 buckets, lambda functions, cloudfront, container services, eks, and more in AWS.',
         imageUrl: 'aws.png',
     },
     {
         title: 'DotNet',
-        description: 'Have worked with the .NET Framework. Have been able to create and deploy microservices with the framework. Have also been able to create and deploy microservices with the framework.',
+        description: 'Have worked with the .NET Framework. ',
         imageUrl: 'dotnet-core.jpeg',
     },
     {
@@ -48,7 +48,7 @@ const ExperienceToList: ProjectItem[] = [
     },
     {
         title: "Relational Databases",
-        description: "Have worked with Relational Databases. Have been able to create and work with databases with Relational Databases in different staging enviorments.",
+        description: "Have worked with Relational Databases in many different environments.",
         imageUrl: 'sql.png',
     }
 ]

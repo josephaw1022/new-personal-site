@@ -21,13 +21,17 @@ export function Banner() {
     }
 
     return (
-        <main className={"flex flex-1 justify-center items-center flex-col min-h-screen  gap-10  "}>
-            <Typeography variant={"h1"} component={"div"} className={" text-black text-center "}>
-                Joseph Whiteaker
-            </Typeography>
-            <h2 className={" text-xl md:text-2xl text-black"}>
-                Full Stack Software Engineer
-            </h2>
+        <main className={"flex flex-1 justify-center items-center flex-col min-h-screen  gap-2  "}>
+            <div className={"flex  flex-col justify-center items-center"}>
+                <h1 className={"text-3xl md:text-4xl text-black my-4"}>
+                    Joseph Whiteaker
+                </h1>
+            </div>
+            <div className={"flex flex-col justify-center items-center"}>
+                <h2 className={" text-xl md:text-2xl text-black"}>
+                    Full Stack Software Engineer
+                </h2>
+            </div>
             <IconButton className="w-24 h-24" onClick={handleDownwardIconButtonClick}>
                 <ArrowDownwardIcon className="text-black" />
             </IconButton>

@@ -21,21 +21,9 @@ export function MediaCard({
 
     const { width } = useWindowSize();
 
-    const cardWidth = useMemo((): int => {
-
-        if (width < MOBILE_SIZE) {
-            return 290;
-        }
-
-        return 350;
-    }
-        , [width]);
-
-
-
 
     return (
-        <Card sx={{ width: 450, height: cardWidth }} className={"my-10 md:mx-10 md:my-2 w-48 md:w-56 lg:w-64 duration-150 "}>
+        <Card sx={{ width: 450, height: 300 }} className={"my-10 md:mx-10 md:my-2 w-48 md:w-56 lg:w-64 duration-150 "}>
             <CardMedia
                 component={"img"}
                 height={"120px"}
