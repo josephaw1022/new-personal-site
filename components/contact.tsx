@@ -5,6 +5,7 @@ import { TextField, Button } from "@mui/material";
 import { useFormik } from 'formik';
 import axios from 'axios';
 import { useSnackbar } from 'notistack';
+import AWS from 'aws-sdk';
 
 export function Contact() {
 
@@ -41,8 +42,28 @@ export function Contact() {
     // Function to handle the form submission
     async function handleFormSubmit(formValues: typeof initialValues) {
 
-        const apiResponse = await axios.post("/api/form-submission", formValues);
-        if (apiResponse.success) {
+        const params = {
+            Destination: {
+                ToAddresses: [toEmail],
+            },
+            Message: {
+                Body: {
+                    Text: {
+                        Data: `${message}`,
+                        Charset: 'UTF-8',
+                    },
+                },
+                Subject: {
+                    Data: `${name} from @${email} sent you a message`,
+                    Charset: 'UTF-8',
+                },
+            },
+            Source: `${process.env.NEXT_PUBLIC_EMAIL_FROM}`,
+        };
+
+        const response = await ses.sendEmail(params).promise();
+
+        if (response.success) {
             // Show a snackbar with a success message
             enqueueSnackbar("Message sent successfully");
 
@@ -50,8 +71,13 @@ export function Contact() {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
-            })
+            });
+
+            return;
         }
+
+        // Show a snackbar with an error message
+        enqueueSnackbar("Message failed to send");
 
         // Clear the form values
         clearTheFormValues();
