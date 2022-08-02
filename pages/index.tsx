@@ -32,7 +32,6 @@ const Home: NextPage = () => {
         <Navbar />
         <Banner />
         <Experience />
-        <Contact />
       </div>
     </>
   )

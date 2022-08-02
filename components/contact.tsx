@@ -7,7 +7,23 @@ import axios from 'axios';
 import { useSnackbar } from 'notistack';
 import AWS from 'aws-sdk';
 
+AWS.config.update({
+    accessKeyId: process.env.NEXT_ACCESS_KEY,
+    secretAccessKey: process.env.NEXT_ACCESS_KEY_ID,
+    region: process.env.NEXT_ACCESS_REGION,
+    signatureVersion: 'v4',
+});
+
+const ses = new AWS.SES({
+    region: 'us-east-1',
+    apiVersion: '2010-12-01',
+    endpoint: 'https://email.us-east-1.amazonaws.com',
+    
+});
+
 export function Contact() {
+
+
 
     const { enqueueSnackbar } = useSnackbar();
 
@@ -42,6 +58,8 @@ export function Contact() {
     // Function to handle the form submission
     async function handleFormSubmit(formValues: typeof initialValues) {
 
+        const toEmail = formValues.email;
+
         const params = {
             Destination: {
                 ToAddresses: [toEmail],
@@ -49,12 +67,12 @@ export function Contact() {
             Message: {
                 Body: {
                     Text: {
-                        Data: `${message}`,
+                        Data: `${formValues.message}`,
                         Charset: 'UTF-8',
                     },
                 },
                 Subject: {
-                    Data: `${name} from @${email} sent you a message`,
+                    Data: `${formValues.name} from @${formValues.email} sent you a message`,
                     Charset: 'UTF-8',
                 },
             },

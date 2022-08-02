@@ -133,7 +133,7 @@ export function Navbar() {
                                 <Grid spacing={2}>
                                     <Button onClick={handleAboutButtonClick} color={"inherit"}>Home</Button>
                                     <Button onClick={handleProjectButtonClick} color={"inherit"}>Experience</Button>
-                                    <Button onClick={handleContactButtonClick} color={"inherit"}>Contact</Button>
+                                    {/* <Button onClick={handleContactButtonClick} color={"inherit"}>Contact</Button> */}
                                     <Button onClick={handleLinkMenuButtonClick} color={"inherit"}>Links</Button>
                                 </Grid>
                             )
@@ -175,10 +175,10 @@ function MenuItems({ clearAnchorElement }) {
             name: "Experience",
             onClick: handleProjectButtonClick
         },
-        {
-            name: "Contact",
-            onClick: handleContactButtonClick
-        },
+        // {
+        //     name: "Contact",
+        //     onClick: handleContactButtonClick
+        // },
         {
             name: "Links",
             onClick: handleLinksButtonClick
