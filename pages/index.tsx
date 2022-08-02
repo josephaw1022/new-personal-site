@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Contact } from '../components/contact';
 import { Navbar } from '../components/navbar';
 import { Banner } from '../components/banner';
-import { Experience } from '../components/Experience';
+import { Experience } from '../components/experience';
 import { useEffect, useMemo } from 'react';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
