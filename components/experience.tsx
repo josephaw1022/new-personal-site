@@ -29,7 +29,7 @@ const ExperienceToList: ProjectItem[] = [
     {
         title: 'AWS',
         description: 'Have worked with AWS. Have been able to create and work with s3 buckets, lambda functions, cloudfront, container services, eks, and more in AWS. Have also been able to work with IAM roles and policies and practice principle of least privelege.',
-        imageUrl: 'aws.webp',
+        imageUrl: 'aws.png',
     },
     {
         title: 'DotNet',
@@ -44,7 +44,7 @@ const ExperienceToList: ProjectItem[] = [
     {
         title: "MongoDB",
         description: "Have worked with MongoDB. Have been able to create and deploy databases with MongoDB.",
-        imageUrl: 'mongo-db.webp',
+        imageUrl: 'mongo-db.png',
     },
     {
         title: "Relational Databases",
