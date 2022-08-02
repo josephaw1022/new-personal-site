@@ -17,7 +17,7 @@ export function MediaCard({
     altImage,
 }: MediaCardProps): ReactElement {
     return (
-        <Card sx={{ width: 450, height: 380 }} className={"my-10 md:mx-10 md:my-2 w-48 md:w-56 lg:w-64 duration-150 "}>
+        <Card sx={{ width: 450, height: 430 }} className={"my-10 md:mx-10 md:my-2 w-48 md:w-56 lg:w-64 duration-150 "}>
             <CardMedia
                 component={"img"}
                 height={"120px"}
