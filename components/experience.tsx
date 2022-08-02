@@ -76,5 +76,4 @@ export function Experience() {
             </div>
         </section>
     )
-
 }
