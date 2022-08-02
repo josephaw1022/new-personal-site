@@ -23,7 +23,8 @@ export function MediaCard({
 
 
     return (
-        <Card sx={{ width: 450, height: 300 }} className={"my-10 md:mx-10 md:my-2 w-48 md:w-56 lg:w-64 duration-150 "}>
+        <div style={{maxWidth: '300px'}}> 
+        <Card sx={{ height: 300, maxWidth: 300 }} className={"my-10 md:mx-10 md:my-2 w-48 md:w-56 lg:w-64 duration-150 "}>
             <CardMedia
                 component={"img"}
                 height={"120px"}
@@ -46,6 +47,7 @@ export function MediaCard({
                 {actions}
             </CardActions>
         </Card>
+        </div>
     );
 }
 
